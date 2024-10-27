@@ -1,0 +1,317 @@
+/*External stylesheet created by Polina Debchuk*/
+
+* {
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: arial, helvetica, sans-serif;    
+    font-size: 14pt;                              
+    text-align: left;                             
+    display:grid;
+    background-color:#B3B8A4;
+    color:#343802;
+    padding:1%;
+}
+
+header, footer {
+    width:100%;
+    display: flex;
+    flex-direction:column;
+    background-color: #7d8241;
+    align-items: center;
+}
+
+/*use positioning for the footer*/
+footer {
+    position: fixed;
+    bottom:0;
+}
+
+/*for visability of the content under the footer because the footer is fixed*/
+main {
+    margin-bottom:5%;
+    padding:1%;
+}
+
+/*text about who was created*/
+footer p{
+    color: azure;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px; 
+    text-align: center;
+}
+
+h1 {
+    color:azure;
+    font-size: 5em;
+    text-align: center;
+}
+
+h2 {
+    margin-top:1% ;
+    margin-bottom: 1%;
+    background-color: #7d8241;
+    color: azure;
+    padding:1%;
+}
+
+h4 {
+    margin-top: 1%;
+    font-size: 1.2em;
+}
+
+h5 {
+    font-size: 1.1em;
+}
+
+nav {
+    padding: 1%;
+    font-weight: bold;
+    display:flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;  
+    padding:5px 10px;
+    color: azure;
+    border:1px azure solid;
+    border-radius: 20px;
+}
+
+a{
+    color:#484d11;
+}
+a:hover {
+    background-color: #c39188; 
+    cursor: pointer;
+}
+
+/********index.html*********************************************************************************/
+/*photo on the Main Page*/
+#photo{
+    float:right;
+    width:30%;
+}
+
+/*text for everyone's greeting*/
+.greeting{
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+    font-size: 3em;
+    color: #840419;
+}
+
+/*text with info about me on the Main Page*/
+div p{
+    margin: 1%;
+    padding: 1%;
+    color: #343802;
+    font-size: 1.5em;
+}
+
+/********resume.html******************************************************************************/
+.main1{
+    margin:1% 2% 8% 2%;
+}
+
+ul {
+    padding-left: 2%;
+    list-style-type:circle; 
+}
+/*title and date in one line*/
+.nameAndDate{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*colored title and date in one line*/
+.nameAndDate1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #7d8241;
+}
+
+/*make bigger font for skills subcategories, such as Languages, Tools, etc.*/
+b {
+    font-size: 1.1em;
+}
+
+/********certificates.html**************************************************************************/
+/*picture's parameters*/
+.cert{
+    margin-top: 1%;
+    margin-bottom: 4%;
+    width:80%;
+}
+
+/*picture's location on the page*/
+.pictCertLocation{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#DeanListPict{
+    margin-bottom: 4%;
+    width:40%;
+}
+
+/********projects.html******************************************************************************/
+/*add space after last <li>*/
+.lastItem{
+    margin-bottom:2%
+}
+
+/********contact.html*******************************************************************************/
+#requirFields{
+    font-style: italic;
+    font-weight: bold;
+    margin-left:0;
+    color:red;
+    margin:1% auto;
+}
+/*add space after fieldsets*/
+fieldset {
+    margin-bottom: 2%;
+}
+
+legend {
+    font-weight: bold;
+}
+
+/*add space for fields inside fieldsets*/
+form div{
+    margin:1%;
+}
+
+input, textarea {
+    font-size: 1em;
+    font-family: none;
+}
+
+.userInfoFields > *{
+    width:40%;
+    display:grid;
+    grid-template-columns: 1fr  2fr;
+}
+
+.descripFields > *{
+    width:90%;
+    display:grid;
+    grid-template-rows: 1fr;
+}
+
+/*size for textarea box, where the user's message has to be*/
+#problem{
+    width:100%;
+    height:300px;
+}
+
+/******************************************RESPONSIVE DESIGN*******************************************/
+
+/*******************mobile*******************/
+@media screen and (max-width: 600px){
+    h1{
+        font-size: 2em;
+    }
+
+    h2, h3, h4, h5, b{
+        font-size: 1em;
+    }
+
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }  
+
+    main, .main1{
+        margin-bottom:30%;
+    }
+
+    /*****index.html*****/
+    #photo{
+        float:right;
+        width:25%;
+    }
+
+    .greeting{
+        font-size: 1em;
+    }
+
+    div p{
+        font-size: 0.9em;
+    }
+
+    /*****resume.html*****/
+    .nameAndDate {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /*****certificates.html*****/
+    .cert{
+        margin-top: 1%;
+        margin-bottom: 4%;
+        width:100%;
+    }
+
+    #DeanListPict{
+        width:100%;
+    }
+
+    .pictCertLocation{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    /*****contact.html*****/
+    .userInfoFields > *{
+        width:100%;
+        display:grid;
+        grid-template-columns: 1fr;
+    }
+
+    .descripFields >*{
+        width:100%;
+        display:grid;
+        grid-template-rows: 1fr;
+    }
+    input, textarea{
+        font-size: 0.5em;
+    }
+
+    footer p{
+        font-size: 1em;
+    }
+}
+
+/*******************tablet*******************/
+
+@media screen and (min-width: 601px) and (max-width:1023px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    } 
+
+    .greeting{
+        font-size: 2em;
+    }
+
+    div p{
+        font-size: 1em;
+    }
+
+    h1{
+        font-size: 2em;
+    }
+    
+    h4, h5{
+        font-size: 1em;
+    }
+}
